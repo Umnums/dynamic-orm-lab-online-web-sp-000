@@ -6,4 +6,7 @@ class InteractiveRecord
     name = self.to_s.downcase + "s"
   end
 
+  def self.column_names
+  end
+
 end
