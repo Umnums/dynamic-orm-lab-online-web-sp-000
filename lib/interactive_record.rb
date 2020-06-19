@@ -21,7 +21,7 @@ class InteractiveRecord
   self.column_names.each do |name|
     attr_accessor name.to_sym
   end
-  attr_accessor :id
+  attr_accessor :id, :name
   def initialize(attrs = {})
     attrs.each do |k,v|
       self.send("#{k}=", v)
