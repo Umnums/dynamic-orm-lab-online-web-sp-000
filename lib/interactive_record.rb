@@ -18,7 +18,7 @@ class InteractiveRecord
     column_names.compact
   end
 
-  def initialize(attrsi = {})
+  def initialize(attrs = {})
     attr.each do |k,v|
       self.send(("#{k}="), v)
     end
