@@ -19,6 +19,9 @@ class InteractiveRecord
   end
 
   def initialize(attrsi = {})
-
+    attr.each do |k,v|
+      self.send(("#{k}="), v)
+    end
+  end
 
 end
