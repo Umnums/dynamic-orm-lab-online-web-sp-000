@@ -17,11 +17,12 @@ class InteractiveRecord
     end
     column_names.compact
   end
-
-  self.column_names.each do |name|
-    attr_accessor name.to_sym
+  def attr_accessor
+    self.column_names.each do |name|
+      attr_accessor name.to_sym
+    end
   end
-  attr_accessor :id, :name
+
   def initialize(attrs = {})
     attrs.each do |k,v|
       self.send("#{k}=", v)
