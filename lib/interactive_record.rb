@@ -19,7 +19,7 @@ class InteractiveRecord
   end
 
   def initialize(attrs = {})
-    attr.each do |k,v|
+    attrs.each do |k,v|
       self.send(("#{k}="), v)
     end
   end
