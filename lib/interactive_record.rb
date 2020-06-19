@@ -30,7 +30,11 @@ class InteractiveRecord
   end
 
   def col_names_for_insert
-    self.class.column_names.flatten
+    values = []
+    self.class.column_names.each do |name|
+      values << name unless name.nil?
+    end
+    values.join(", ")
   end
 
 
