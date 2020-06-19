@@ -18,4 +18,7 @@ class InteractiveRecord
     column_names.compact
   end
 
+  def initialize(attrsi = {})
+    
+
 end
