@@ -32,7 +32,7 @@ class InteractiveRecord
   def col_names_for_insert
     values = []
     self.class.column_names.each do |name|
-      values << name unless name.nil?
+      values << name unless name == id
     end
     values.join(", ")
   end
