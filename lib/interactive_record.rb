@@ -55,7 +55,7 @@ class InteractiveRecord
 
   end
 
-  def self.findby(attrs)
+  def self.find_by(attrs)
     DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{attrs[0]} = ?", attrs.send)
   end
 
