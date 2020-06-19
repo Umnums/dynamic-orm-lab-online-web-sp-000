@@ -19,6 +19,6 @@ class InteractiveRecord
   end
 
   def initialize(attrsi = {})
-    
+
 
 end
